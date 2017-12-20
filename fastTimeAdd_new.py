@@ -1,3 +1,4 @@
+
 process.options = cms.untracked.PSet(
     wantSummary = cms.untracked.bool( True ),
     numberOfThreads = cms.untracked.uint32( 4 ),
@@ -31,8 +32,9 @@ process.TimingOutput = cms.EndPath( process.fastTimerServiceClient + process.dqm
 
 process.GlobalTag.toGet = cms.VPSet(
   cms.PSet(record = cms.string("EcalLaserAPDPNRatiosRcd"),
-           tag = cms.string("EcalLaserAPDPNRatios_weekly_v1_hlt"),
+           tag = cms.string("EcalLaserAPDPNRatios_TOADAPT_beginning_at_1"),
+
 #           connect = cms.string("sqlite_file:/afs/cern.ch/work/e/ecaltrg/public/dropbox/DBLaser/DBLaser_292925.db")
-           connect = cms.string("sqlite_file:/afs/cern.ch/work/e/ecaltrg/public/dropbox/DBLaser/TOADAPT.db")
+           connect = cms.string("sqlite_file:/afs/cern.ch/work/e/ecaltrg/public/dropbox/DBLaser/DBLaser_TOADAPT_moved_to_1.db")
           )
 )
