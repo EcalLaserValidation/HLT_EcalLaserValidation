@@ -73,6 +73,3 @@ cp outputDiff.log ${WORKSPACE}/upload/${2}/outputDiff.log
 #awk 'NR==3 {print "timing " $2," for reference path using sqlite2"} ' $pathToMonitor\_sqlite2.log >> diff.txt
 
 
-#echo " difference in counts and timing using the two sqlite files is "
-#cat diff.txt
-
