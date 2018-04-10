@@ -2,5 +2,5 @@ week 14
 year 2018
 run1 313560
 run2 313560
-sqlite_pedes 305848
+type laser
 
