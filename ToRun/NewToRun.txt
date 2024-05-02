@@ -1,5 +1,5 @@
-week 18
-year 2024
-run1 380115
-run2 380126
-type laser
+week 18 
+year 2023
+run1 379799
+run2 380279
+type pedestal
