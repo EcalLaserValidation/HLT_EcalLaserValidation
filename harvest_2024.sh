@@ -13,7 +13,7 @@ done
 
 for path in ${pathToMonitor[*]}
 do
-    awk -F" " '{sum+=$7}END{print "New normalized rate for path " $6,sum}' output_sqlite_$path.log >> output_sqlite.log
+    awk -F" " '{sum+=$7}END{print "New normalized rate for path " $6,int(sum)}' output_sqlite_$path.log >> output_sqlite.log
 done
 
 if [[ `wget -S --spider https://cmssdt.cern.ch/SDT/public/EcalLaserValidation/HLT_EcalLaserValidation/${1}_${3}/output_ref_${1}_${3}.log 2>&1 | grep 'HTTP/1.1 200 OK'` ]]
