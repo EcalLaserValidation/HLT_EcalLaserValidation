@@ -9,7 +9,8 @@ sleep 5
 reference=$1
 #listaFiles=files_Run_357271.txt
 #listaFiles=files_Run_362720.txt
-listaFiles=files_Run_367696.txt
+#listaFiles=files_Run_367696.txt
+listaFiles=files_Run_380647.txt
 #listaFiles=files_Run_355921.txt: failed to run with these data so went back to the data of ERA-G 362720
 
 #listaFiles=$6
@@ -33,8 +34,10 @@ echo "listaFiles = "$listaFiles
 #export CMSREL=CMSSW_10_1_4
 #export SCRAM_ARCH=slc6_amd64_gcc630
 #scram -a $SCRAM_ARCH project $CMSREL
-export CMSREL=CMSSW_13_0_6
-export SCRAM_ARCH=slc7_amd64_gcc11
+#export CMSREL=CMSSW_13_0_6
+#export SCRAM_ARCH=slc7_amd64_gcc11
+export CMSREL=CMSSW_14_0_6
+export SCRAM_ARCH=el8_amd64_gcc12
 scram -a $SCRAM_ARCH project $CMSREL
 
 #harvest.sh
@@ -42,6 +45,7 @@ cp harvest_2024.sh $CMSREL/src/.
 cp output_ref_349295_pedestal.log $CMSREL/src/.
 #listaFiles 
 cp $listaFiles $CMSREL/src/.
+#2024: hltGetConfiguration /dev/CMSSW_14_0_0/GRun/V107 --globaltag 140X_dataRun3_HLT_v3  --data --prescale 2p0E34+ZeroBias+HLTPhysics --output minimal --max-events 2000 --eras Run3 --l1-emulator uGT --l1 L1Menu_Collisions2024_v1_1_0_xml > hlt.py
 #2023: new 2023 dataset: new hlt.py produced with: hltGetConfiguration /dev/CMSSW_13_0_0/GRun/V115  --data --process MYHLT --type GRun  --prescale 2p0E34+ZeroBias+HLTPhysics --globaltag 130X_dataRun3_HLT_v2  --max-events -1 > hlt.py_v1306 in release under zghiche...run3/TPLasVal_1306/src
 #2023 hlt.py from Sanu Varghese otained with: hltGetConfiguration /dev/CMSSW_13_0_0/GRun/V8  --data --process MYHLT --type GRun  --prescale 2p0E34+ZeroBias+HLTPhysics --globaltag 130X_dataRun3_HLT_v2  --max-events -1 > hlt.py
 #hlt.py got from Sam Harper: https://www.cern.ch/sharper/cms/trig/2022/hlt_1235_2018cust.py
