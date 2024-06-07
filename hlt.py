@@ -1,5 +1,5 @@
 # hltGetConfiguration /dev/CMSSW_14_0_0/GRun/V107 --globaltag 140X_dataRun3_HLT_v3 --data --prescale 2p0E34+ZeroBias+HLTPhysics --output minimal --max-events 2000 --eras Run3 --l1-emulator uGT --l1 L1Menu_Collisions2024_v1_1_0_xml --paths HLT_Ele32_WPTight_Gsf_v*,HLT_Ele35_WPTight_Gsf_v*,HLT_Ele38_WPTight_Gsf_v*,HLT_Ele30_eta2p1_WPTight_Gsf_CentralPFJet35_EleCleaned_v*,HLT_Photon33_v*,HLT_PFMET120_PFMHT120_IDTight_v*
-
+#modified manually the %maxevents%
 # /dev/CMSSW_14_0_0/GRun/V107 (CMSSW_14_0_5)
 
 import FWCore.ParameterSet.Config as cms
@@ -13076,7 +13076,7 @@ process.schedule.append( process.MinimalOutput )
 
 # limit the number of events to be processed
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32( 2000 )
+    input = cms.untracked.int32( %maxevents% )
 )
 
 # enable TrigReport, TimeReport and MultiThreading
@@ -13117,7 +13117,7 @@ _customInfo['globalTags'][False] = "auto:run3_mc_GRun"
 _customInfo['inputFiles']={}
 _customInfo['inputFiles'][True]  = "file:RelVal_Raw_GRun_DATA.root"
 _customInfo['inputFiles'][False] = "file:RelVal_Raw_GRun_MC.root"
-_customInfo['maxEvents' ]=  2000
+_customInfo['maxEvents' ]=  %maxevents%
 _customInfo['globalTag' ]= "140X_dataRun3_HLT_v3"
 _customInfo['inputFile' ]=  ['file:RelVal_Raw_GRun_DATA.root']
 _customInfo['realData'  ]=  True
