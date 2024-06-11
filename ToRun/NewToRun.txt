@@ -1,5 +1,5 @@
 week 24 
 year 2024
-run1 381486
-run2 381227
+run1 381227
+run2 381486
 type pedestal
