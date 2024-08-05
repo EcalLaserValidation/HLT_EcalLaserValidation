@@ -1,5 +1,5 @@
-week 32 
+week 32
 year 2024
-run1 383793
-run2 384079
-type pedestal
+run1 384069
+run2 384128
+type laser
