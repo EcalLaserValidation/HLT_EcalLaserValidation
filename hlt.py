@@ -13099,14 +13099,14 @@ if 'MessageLogger' in process.__dict__:
     process.MessageLogger.ThroughputService = cms.untracked.PSet()
 
 # load the DQMStore and DQMRootOutputModule
-process.load( "DQMServices.Core.DQMStore_cfi" )
+#process.load( "DQMServices.Core.DQMStore_cfi" )
 
-process.dqmOutput = cms.OutputModule("DQMRootOutputModule",
-    fileName = cms.untracked.string("DQMIO.root")
-)
+#process.dqmOutput = cms.OutputModule("DQMRootOutputModule",
+#    fileName = cms.untracked.string("DQMIO.root")
+#)
 
-process.DQMOutput = cms.FinalPath( process.dqmOutput )
-process.schedule.append( process.DQMOutput )
+#process.DQMOutput = cms.FinalPath( process.dqmOutput )
+#process.schedule.append( process.DQMOutput )
 
 # add specific customizations
 _customInfo = {}
