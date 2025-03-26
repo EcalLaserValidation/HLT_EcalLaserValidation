@@ -11,7 +11,7 @@ echo ToRun/$file
     label=`grep "type" ToRun/$file | awk '{print $2}'`
 cp ToRun/$file RunFiles/.
 rm ToRun/$file
-echo "./runHLTEcalLaserValidation_2024.sh $sqliteRef $sqliteNew $label $week"
+echo "./runHLTEcalLaserValidation_2025.sh $sqliteRef $sqliteNew $label $week"
 line="files_Run_323775.txt"
 #split -n l/9 --numeric-suffixes files_Run_323775.txt files_Run_323775_split_
 #ls files_Run_323775_split_* > ls_files_Run_323775_split.txt
@@ -19,11 +19,11 @@ line="files_Run_323775.txt"
 #for line in $(less ls_files_Run_323775_split.txt)
 #do
 #    nn=$[$nn+1]
-#    ./runHLTEcalLaserValidation_2024.sh $sqliteRef $sqliteNew $label $week $(getconf _NPROCESSORS_ONLN) $line $nn &
-    ./runHLTEcalLaserValidation_2024.sh $sqliteRef $sqliteNew $label $week $(getconf _NPROCESSORS_ONLN) 
+#    ./runHLTEcalLaserValidation_2025.sh $sqliteRef $sqliteNew $label $week $(getconf _NPROCESSORS_ONLN) $line $nn &
+    ./runHLTEcalLaserValidation_2025.sh $sqliteRef $sqliteNew $label $week $(getconf _NPROCESSORS_ONLN) 
 #done
 #wait
-#./harvest_2024.sh $sqliteRef $sqliteNew $label
+#./harvest_2025.sh $sqliteRef $sqliteNew $label
 else
 echo "No new files"
 fi
