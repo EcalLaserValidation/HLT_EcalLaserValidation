@@ -1,5 +1,5 @@
-week 26 
+week 27 
 year 2025
-run1 393383
-run2 393738
+run1 393738
+run2 393884
 type pedestal
