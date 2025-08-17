@@ -14,7 +14,7 @@ cp ToRun/$file RunFiles/.
 rm ToRun/$file
 echo "./runHLTEcalLaserValidation_2024.sh $sqliteRef $sqliteNew $label $week"
 ./runHLTEcalLaserValidation_2024.sh $sqliteRef $sqliteNew $label $week $(getconf _NPROCESSORS_ONLN)
-git commit -a -m "clean ToRun files"
+git commit -a -m "clean ToRun files...getting there"
 git push
 else
 echo "No new files"
