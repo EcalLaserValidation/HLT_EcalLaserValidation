@@ -1,5 +1,5 @@
-week 47 
+week 48
 year 2025
-run1 399612
-run2 399872
-type pedestal
+run1 399843
+run2 399942
+type laser
