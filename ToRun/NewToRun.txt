@@ -1,0 +1,5 @@
+week 08 
+year 2026
+run1 400811
+run2 401000
+type pedestal
