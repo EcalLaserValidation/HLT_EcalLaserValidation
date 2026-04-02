@@ -1,5 +1,5 @@
-week 14
+week 14 
 year 2026
-run1 402537
-run2 402574
-type laser
+run1 402516
+run2 402579
+type pedestal
